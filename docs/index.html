@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <title>文档 - MagixJS</title>
-        <link rel="stylesheet" href="docs/assets/style.css"/>
+        <link rel="stylesheet" href="assets/style.css"/>
     </head>
     <body>
-        <script type="text/javascript" src="libs/seajs/sea.js?0.9.3">
+        <script type="text/javascript" src="../libs/seajs/sea.js?0.9.3">
         </script>
-        <script type="text/javascript" src="libs/magix/magix.js">
+        <script type="text/javascript" src="../libs/magix/magix.js">
         </script>
         <script type="text/javascript">
             (function(){
@@ -18,12 +18,12 @@
                 //通过alies配置top-level模块采用debug版本,配置appp,config,libs的实际地址
                 seajs.config({
                     alias: {
-                        'app': currentPagePath + 'docs/app',
-                        'libs': currentPagePath + 'libs'
+                        'app': currentPagePath + 'app',
+                        'libs': currentPagePath + '../libs'
                     }
                 });
                 //启动Magix
-                Magix.History.init("docs/mxhistory.html", function(query){
+                Magix.History.init("mxhistory.html", function(query){
                     seajs.use(['libs/magix/controller'], function(ctrl){
                         ctrl._route(query);
                     });
