@@ -6,12 +6,12 @@
 /**
  * 通用方法静态类
  * @class Helper
- * @namespace lib.magix
+ * @namespace libs.magix
  * @static
  */
 define(function(require){
-    var $ = require("jquery");
-    var templates = require("./controller").env.templates;
+    var $ = require("libs/jquery");
+    var templates = require("libs/magix/controller").env.templates;
     var helper = {};
     helper.ajax = $.ajax;
     /**

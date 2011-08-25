@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="assets/style.css"/>
     </head>
     <body>
-        <script type="text/javascript" src="../libs/seajs/sea.js?0.9.3">
+        <script type="text/javascript" src="../libs/sea.js">
         </script>
         <script type="text/javascript" src="../libs/magix/magix.js">
         </script>
@@ -19,15 +19,12 @@
                 seajs.config({
                     alias: {
                         'app': currentPagePath + 'app',
-                        'libs': currentPagePath + '../libs'
+                        'libs': currentPagePath + '../libs',
+                        'assets': currentPagePath + 'assets'
                     }
                 });
                 //启动Magix
-                Magix.History.init("mxhistory.html", function(query){
-                    seajs.use(['libs/magix/controller'], function(ctrl){
-                        ctrl._route(query);
-                    });
-                });
+                Magix.History.init();
             })();
         </script>
     </body>
