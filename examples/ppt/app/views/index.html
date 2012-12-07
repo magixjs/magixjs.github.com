@@ -1,18 +1,33 @@
 <!--page master-->
 <div id="main_wrap">
 	<div id="main">
-		<img src="<#=Magix.config().appHome+'theme/'#>images/<#=page==0?'index_bg':'content_bg'#>.png" />
+		<img src="<#=Magix.config().appHome+'theme/'#>images/<#=page<=1?'index':'content'#>.jpg" />
 		<#=pageContent#>
 	</div>
+</div>
+
+<!--page-->
+<div class="title theme">
+	末日前的黎明
+</div>
+<div class="content theme-content">
+	<div class="item i1">习惯</div>
+	<div class="item i2">知己知彼</div>
+	<div class="item i3">解决方案</div>
+	<div class="item i4">内在美</div>
+	<div class="item i5">弹性</div>
+	<div class="item i6">以人为本</div>
+	<div class="item i7">信任</div>
+	<div class="item i8">爱</div>
+	<div class="item i9">问题</div>
+	<div class="item i10">隐患</div>
 </div>
 
 <!--page-->
 <div class="lecture">
 	Magix核心升级总结<br />
 	1.0来了，嘎嘎~~
-</div>
-<div class="name">
-	行列
+	<div class="name">--行列</div>
 </div>
 
 <!--page-->
@@ -546,6 +561,69 @@
 	<br />
 	开发人员的编程习惯需要照顾，虽然一些问题magix中给出了解决方案，但要针对经常出现的问题给予良好的解决，要不然会让开发人员感觉很不爽，这一块会在后面的代码细节与风险中给出示例和解决方案，<a href="linkTo:core_code_habit">点击这里直达</a>
 </div>
+
+<!--page-->
+<div class="title">
+	目录-过去的问题-其它
+</div>
+<div class="content text">
+	考虑这样的代码：<br />
+	S.io({<br />
+	　　url:'...',<br />
+	　　data:'...',<br />
+	　　success:function(){<br />
+	　　　　<br />
+	　　},<br />
+	　　error:function(){<br />
+	　　　　<br />
+	　　}<br />
+	})<br />
+	很常见的ajax请求书写方法，有问题吗？
+</div>
+
+<!--page-->
+<div class="title">
+	目录-过去的问题-其它
+</div>
+<div class="content text">
+	放在我们的view中：<br />
+	render:function(){<br />
+	　　S.io({<br />
+	　　　　url:'...',<br />
+	　　　　data:'...',<br />
+	　　　　success:function(){<br />
+	　　　　　　<br />
+	　　　　},<br />
+	　　　　error:function(){<br />
+	　　　　　　<br />
+	　　　　}<br />
+	　　})<br />
+	}<br />
+	有问题吗？
+</div>
+
+<!--page-->
+<div class="title">
+	目录-过去的问题-其它
+</div>
+<div class="content text">
+	render:function(){<br />
+	　　S.io({<br />
+	　　　　url:'...',<br />
+	　　　　data:'...',<br />
+	　　　　success:function(){<br />
+	　　　　　　<span class="red">if(_self.exist){</span><br />
+	　　　　　　　　...<br />
+	　　　　　　<span class="red">}</span><br />
+	　　　　},<br />
+	　　　　error:function(){<br />
+	　　　　　　<br />
+	　　　　}<br />
+	　　})<br />
+	}<br />
+	有问题吗？
+</div>
+
 <!--page-->
 <div class="title">
 	目录
