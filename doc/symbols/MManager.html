@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="generator" content="JsDoc Toolkit" />
         
-        <title>Model</title>
+        <title>MManager</title>
         <style>
             /*************************************************************************************
  * Reset
@@ -263,11 +263,11 @@ dl.data .dd{
                             <div class="box constructor-box">
                                 <div class="box-hd">
                                     
-                                    <h3><b class="name"><a href="../symbols/Model.html#constructor">Model</a></b>
+                                    <h3><b class="name"><a href="../symbols/MManager.html#constructor">MManager</a></b>
                                         
                                         
                                         
-                                        <span class="desc">Model类</span>
+                                        <span class="desc">Model管理对象，可方便的对Model进行缓存和更新</span>
                                     </h3>
                                     
                                 </div>
@@ -282,7 +282,7 @@ dl.data .dd{
 
                                     
                                         <p>源码：
-                                            <a href="../symbols/src/D__wamp_www_br_luna_subway_20130314_gaiban_2_subway-webapp2_src_main_webapp_src_libs_magix_docsrc__mxext_kissy_mxext_model.js.html">model.js</a></p>
+                                            <a href="../symbols/src/D__wamp_www_br_luna_subway_20130314_gaiban_2_subway-webapp2_src_main_webapp_src_libs_magix_docsrc__mxext_kissy_mxext_mmanager.js.html">mmanager.js</a></p>
 
                                     
 
@@ -293,89 +293,6 @@ dl.data .dd{
                             
                             <!-- properties START -->
                             
-                                
-                                
-                                <div class="box properties-box">
-                                    <div class="box-hd">
-                                        <h3>Properties</h3>
-                                    </div>
-                                    <div class="box-bd">
-                                        <ul class="list summary-list">
-                                            
-                                                
-                                            
-                                                
-                                            
-                                                
-                                                    <li class="li">
-                                                        <b class="name"><a href="../symbols/Model.html#uri">uri</a></b>
-                                                        <span class="type">{String}</span>
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        <span class="desc">与后台接口对应的前端url key</span>
-                                                    </li>
-                                                
-                                            
-                                                
-                                                    <li class="li">
-                                                        <b class="name"><a href="../symbols/Model.html#urlMap">urlMap</a></b>
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        
-                                                        <span class="desc">url映射对象</span>
-                                                    </li>
-                                                
-                                            
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                                    
-                            
-                            
-                                
-                                
-                                    <div class="box properties-box">
-                                        <div class="box-hd">
-                                            <h3>Static Properties</h3>
-                                        </div>
-                                        <div class="box-bd">
-                                            <ul class="static-list">
-                                            
-                                                
-                                                    <li class="li">
-                                                        Model.<b class="name"><a href="../symbols/Model.html#.GET">GET</a></b>
-                                                        
-                                                        <span class="desc">GET枚举</span>
-                                                    </li>
-
-                                                
-
-                                            
-                                                
-                                                    <li class="li">
-                                                        Model.<b class="name"><a href="../symbols/Model.html#.POST">POST</a></b>
-                                                        
-                                                        <span class="desc">POST枚举</span>
-                                                    </li>
-
-                                                
-
-                                            
-                                                
-
-                                            
-                                                
-
-                                            
-                                            </ul>
-                                        </div>
-                                     </div>
-                                
                             
                             <!-- properties END -->
                             
@@ -392,262 +309,162 @@ dl.data .dd{
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#abort">abort</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#clearCacheByKey">clearCacheByKey</a></b>
+                                                <span class="param">(key)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">中止请求</span>                                                
+                                                <span class="desc">根据key清除缓存的models</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#beginTransaction">beginTransaction</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#clearCacheByName">clearCacheByName</a></b>
+                                                <span class="param">(name)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">开始事务</span>                                                
+                                                <span class="desc">根据name清除缓存的models</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#endTransaction">endTransaction</a></b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">结束事务</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                Model.
-                                                <b class="name"><a href="../symbols/Model.html#.extend">extend</a></b>
-                                                <span class="param">(props, ctor)</span>
+                                                MManager.
+                                                <b class="name"><a href="../symbols/MManager.html#.create">create</a></b>
+                                                <span class="param">(modelClass)</span>
                                                 
                                                 
                                                 <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">继承</span>                                                
+                                                <span class="desc">创建Model类管理对象</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#get">get</a></b>
-                                                <span class="param">(type)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#createModel">createModel</a></b>
+                                                <span class="param">(modelAttrs)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取属性</span>                                                
+                                                <span class="desc">创建model对象</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getParams">getParams</a></b>
-                                                <span class="param">(type)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#fetchAll">fetchAll</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取参数</span>                                                
+                                                <span class="desc">获取models，所有请求完成回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getParamsObject">getParamsObject</a></b>
-                                                <span class="param">(type)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#fetchOne">fetchOne</a></b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取参数对象</span>                                                
+                                                <span class="desc">获取models，其中任意一个成功均立即回调，回调会被调用多次</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getPostParams">getPostParams</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#fetchOrder">fetchOrder</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取通过setPostParams放入的参数</span>                                                
+                                                <span class="desc">获取models，按顺序回回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getPostParamsObject">getPostParamsObject</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#getModel">getModel</a></b>
+                                                <span class="param">(modelAttrs)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取Post参数对象</span>                                                
+                                                <span class="desc">获取model对象，优先从缓存中获取</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getUrlParams">getUrlParams</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#getModelFromCache">getModelFromCache</a></b>
+                                                <span class="param">(modelAttrs)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取通过setUrlParams放入的参数</span>                                                
+                                                <span class="desc">从缓存中获取model对象</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#getUrlParamsObject">getUrlParamsObject</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#getModelMeta">getModelMeta</a></b>
+                                                <span class="param">(modelAttrs)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取参数对象</span>                                                
+                                                <span class="desc">获取model注册时的元信息</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#isAborted">isAborted</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#getModelUrl">getModelUrl</a></b>
+                                                <span class="param">(name)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">获取当前model是否已经取消了请求</span>                                                
+                                                <span class="desc">获取model的url</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#load">load</a></b>
-                                                <span class="param">(ops)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#registerMethods">registerMethods</a></b>
+                                                <span class="param">(methods)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">加载model数据</span>                                                
+                                                <span class="desc">注册方法，前面是参数，后面2个是成功和失败的回调</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#parse">parse</a></b>
-                                                <span class="param">(resp)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#registerModels">registerModels</a></b>
+                                                <span class="param">(models)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">处理Model.sync成功后返回的数据</span>                                                
+                                                <span class="desc">注册APP中用到的model</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#request">request</a></b>
-                                                <span class="param">(ops)</span>
+                                                <b class="name"><a href="../symbols/MManager.html#saveAll">saveAll</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">向服务器请求，加载或保存数据</span>                                                
+                                                <span class="desc">保存models，所有请求完成回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#reset">reset</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#saveOne">saveOne</a></b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">重置缓存的参数对象，对于同一个model反复使用前，最好能reset一下，防止把上次请求的参数也带上</span>                                                
+                                                <span class="desc">保存models，其中任意一个成功均立即回调，回调会被调用多次</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
                                                 
-                                                <b class="name"><a href="../symbols/Model.html#rollbackTransaction">rollbackTransaction</a></b>
-                                                <span class="param">()</span>
+                                                <b class="name"><a href="../symbols/MManager.html#saveOrder">saveOrder</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
-                                                <span class="desc">回滚对model数据做的更改</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#save">save</a></b>
-                                                <span class="param">(ops)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">保存model数据</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#set">set</a></b>
-                                                <span class="param">(key, val, saveKeyList)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置属性</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#setParams">setParams</a></b>
-                                                <span class="param">(obj1, obj2, type, ignoreIfExist, callback)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置参数</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#setPostParams">setPostParams</a></b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置post参数</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#setPostParamsIf">setPostParamsIf</a></b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置post参数，只有未设置过的参数才进行设置</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#setUrlParams">setUrlParams</a></b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置url参数</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#setUrlParamsIf">setUrlParamsIf</a></b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">设置url参数，只有未设置过的参数才进行设置</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#sync">sync</a></b>
-                                                <span class="param">(model, ops)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">Model调用save或load方法后，与服务器同步的方法，供应用开发人员覆盖</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                
-                                                <b class="name"><a href="../symbols/Model.html#url">url</a></b>
-                                                <span class="param">(url)</span>
-                                                
-                                                
-                                                
-                                                <span class="desc">获取model对象请求时的后台地址</span>                                                
+                                                <span class="desc">保存models，按顺序回回调done</span>                                                
                                             </li>
                                             
                                         </ul>
@@ -673,7 +490,7 @@ dl.data .dd{
                                     <ul class="list detail-list">
                                         <li class="li">
                                             <div class="title">
-                                                <b class="name">Model</b>
+                                                <b class="name">MManager</b>
                                                 
                                             </div>
                                             
@@ -689,11 +506,11 @@ dl.data .dd{
                                                         
                                                         <li class="li">
                                                             &nbsp;
-                                                                <b>ops</b>
+                                                                <b>modelClass</b>
                                                             
                                                             
-                                                            <span class="type"><span class="light fixedFont">{Object}</span> </span>
-                                                            <span class="desc">初始化Model时传递的其它参数对象</span>
+                                                            <span class="type"><span class="light fixedFont">{<a href="../symbols/Model.html">Model</a>}</span> </span>
+                                                            <span class="desc">Model类</span>
                                                         </li>
                                                         
                                                     </ul>
@@ -709,53 +526,6 @@ dl.data .dd{
                                                 
                                                 
                                                 
-                                                <dt>示例：</dt>
-                                                <dd>
-                                                    
-                                                    <pre class='brush: js;'>项目中对Model的引用及配置：KISSY.add("app/base/model",function(S,Model,io){
-            return Model.extend(
-                urlMap:{
-                    'modules':{
-                        'get':'/modules.jsp?action=get',
-                        'set':'/modules.jsp?action=set'
-                    }
-                },
-                parse:function(resp){
-                    return resp;//可对返回的结果在这地方进行简单的处理
-                },
-                sync:function(model,ops){
-                    var url=model.url();
-                    var isJSONP=model.get('isJSONP');
-                    return io({
-                        url:url,
-                        success:function(resp){
-                            ops.success(resp);
-                        }
-                    });
-                }
-            });
-        },{
-            requires:["mxext/model","ajax"]
-        });
-
-        在view中的具体使用：
-
-        render:function(){
-            var m=new Model({
-                uri:'modules:get'
-            });
-            m.load({
-                success:function(data){
-                    //TODO
-                },
-                error:function(msg){
-                    //TODO
-                }
-            })
-        }</pre>
-                                                    
-                                                </dd>                                                
-                                                
                                             </dl>
                                         </li>
                                     </ul>
@@ -765,99 +535,6 @@ dl.data .dd{
                             <!-- constructor details START-->
 
                             <!-- properties details START -->
-			
-				<h3>
-					Property Detail
-				</h3>
-				
-					<a name=".GET"> </a>
-					<div class="fixedFont">
-
-					
-					<span class="light">Model.</span><b class="name">GET</b>
-                     &lt;static&gt; 
-					</div>
-					<div class="desc">
-						GET枚举
-						
-						
-					</div>
-
-					
-
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".POST"> </a>
-					<div class="fixedFont">
-
-					
-					<span class="light">Model.</span><b class="name">POST</b>
-                     &lt;static&gt; 
-					</div>
-					<div class="desc">
-						POST枚举
-						
-						
-					</div>
-
-					
-
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name="uri"> </a>
-					<div class="fixedFont">
-
-					<span class="light">{String}</span>
-					<b class="name">uri</b>
-                     
-					</div>
-					<div class="desc">
-						与后台接口对应的前端url key
-						
-						
-					</div>
-
-					
-
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name="urlMap"> </a>
-					<div class="fixedFont">
-
-					
-					<b class="name">urlMap</b>
-                     
-					</div>
-					<div class="desc">
-						url映射对象
-						
-						
-					</div>
-
-					
-
-						
-						
-						
-						
-
-					
-				
 			
                             <!-- properties detail END -->
 
@@ -871,24 +548,40 @@ dl.data .dd{
                                     <ul class="list detail-list">
                                         
                                         <li class="li">
-                                            <a name="abort"> </a>
+                                            <a name="clearCacheByKey"> </a>
                                             <div class="title" >
                                                 
-                                                <b class="name">abort</b>
-                                                <span class="param">()</span>
+                                                <b class="name">clearCacheByKey</b>
+                                                <span class="param">(key)</span>
                                                 
                                                 
                                                 
                                             </div>
 
                                             <div class="desc">
-                                                中止请求
+                                                根据key清除缓存的models
                                                 
                                                 
                                             </div>
                                             
                                             <dl>                                            
                                                 
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">key</b>
+                                                            
+                                                            
+                                                            <span class="type">{String}</span> 
+                                                            <span class="desc">字符串</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
                                                 
                                                 
                                                 
@@ -909,24 +602,860 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name="beginTransaction"> </a>
+                                            <a name="clearCacheByName"> </a>
                                             <div class="title" >
                                                 
-                                                <b class="name">beginTransaction</b>
-                                                <span class="param">()</span>
+                                                <b class="name">clearCacheByName</b>
+                                                <span class="param">(name)</span>
                                                 
                                                 
                                                 
                                             </div>
 
                                             <div class="desc">
-                                                开始事务
+                                                根据name清除缓存的models
                                                 
                                                 
                                             </div>
                                             
                                             <dl>                                            
                                                 
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">name</b>
+                                                            
+                                                            
+                                                            <span class="type">{String}</span> 
+                                                            <span class="desc">字符串</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name=".create"> </a>
+                                            <div class="title" >
+                                                <span>MManager.</span>
+                                                <b class="name">create</b>
+                                                <span class="param">(modelClass)</span>
+                                                
+                                                
+                                                <span class="attr">&lt;static&gt;</span>
+                                            </div>
+
+                                            <div class="desc">
+                                                创建Model类管理对象
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">modelClass</b>
+                                                            
+                                                            
+                                                            <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
+                                                            <span class="desc">Model类</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="createModel"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">createModel</b>
+                                                <span class="param">(modelAttrs)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                创建model对象
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">modelAttrs</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">model描述信息对象</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{Object}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="fetchAll"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">fetchAll</b>
+                                                <span class="param">(models, done)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取models，所有请求完成回调done
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">done</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="fetchOne"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">fetchOne</b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取models，其中任意一个成功均立即回调，回调会被调用多次
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@model</b>
+                                                            
+                                                            
+                                                            <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
+                                                            <span class="desc">回调时传入的model对象</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@error</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">错误对象</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="fetchOrder"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">fetchOrder</b>
+                                                <span class="param">(models, done)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取models，按顺序回回调done
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">done</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="getModel"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">getModel</b>
+                                                <span class="param">(modelAttrs)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取model对象，优先从缓存中获取
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">modelAttrs</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">model描述信息对象</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{Object}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="getModelFromCache"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">getModelFromCache</b>
+                                                <span class="param">(modelAttrs)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                从缓存中获取model对象
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">modelAttrs</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Object}</span> 
+                                                            <span class="desc"></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="getModelMeta"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">getModelMeta</b>
+                                                <span class="param">(modelAttrs)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取model注册时的元信息
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">modelAttrs</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Object}</span> 
+                                                            <span class="desc">名称</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Throws</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <b class="param"></b>
+                                                            <span class="type">{Error}</span> 
+                                                            <span class="desc">If unfound:name</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{Object}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="getModelUrl"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">getModelUrl</b>
+                                                <span class="param">(name)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取model的url
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">name</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Object}</span> 
+                                                            <span class="desc">model元信息名称</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{String}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="registerMethods"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">registerMethods</b>
+                                                <span class="param">(methods)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                注册方法，前面是参数，后面2个是成功和失败的回调
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">methods</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">方法对象</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="registerModels"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">registerModels</b>
+                                                <span class="param">(models)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                注册APP中用到的model
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object|Array}</span> 
+                                                            <span class="desc">模块描述信息</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.name</b>
+                                                            
+                                                            
+                                                            <span class="type">{String}</span> 
+                                                            <span class="desc">app中model的唯一标识</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.options</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">传递的参数信息，如{uri:'test',isJSONP:true,updateIdent:true}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.urlParams</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">发起请求时，默认的get参数对象</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.postParams</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">发起请求时，默认的post参数对象</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.cacheKey</b>
+                                                            
+                                                            
+                                                            <span class="type">{String}</span> 
+                                                            <span class="desc">指定model缓存的key，当指定后，该model会进行缓存，下次不再发起请求</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.cacheTime</b>
+                                                            
+                                                            
+                                                            <span class="type">{Integer}</span> 
+                                                            <span class="desc">缓存过期时间，以毫秒为单位，当过期后，再次使用该model时会发起新的请求(前提是该model指定cacheKey被缓存后cacheTime才有效)</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.before</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">model在发起请求前的回调</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models.after</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">model在发起请求，并且通过Model.sync调用doneess后的回调</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
                                                 
                                                 
                                                 
@@ -945,7 +1474,56 @@ dl.data .dd{
                                                 <dt>Example</dt>
                                                 <dd>
                                                         
-                                                            <pre class="brush: js; ">//...var userList=m.get('userList');//从model中取出userList数据m.beginTransaction();//开始更改的事务userList.push({userId:'58782',userName:'xinglie.lkf'});//添加一个新用户m.save({    //...    success:function(){          m.endTransaction();//成功后通知model结束事务      },    error:function(){        m.rollbackTransaction();//出错，回滚到原始数据状态    }});//应用场景：//前端获取用户列表，添加，删除或修改用户后//把新的数据提交到数据库，因model是数据的载体//可能会直接在model原有的数据上修改，提交修改后的数据//如果前端提交到服务器，发生失败时，需要把//model中的数据还原到修改前的状态(当然也可以再次提交)////注意：//可能添加，删除不太容易应用这个方法，修改没问题//</pre>
+                                                            <pre class="brush: js; ">KISSY.add("app/base/mmanager",function(S,MManager,Model){
+                var MM=MManager.create(Model);
+                MM.registerModels([
+                    {
+                        name:'Home_List',
+                        options:{
+                            uri:'test'
+                        },
+                        urlParams:{
+                            a:'12'
+                        },
+                        cacheKey:'',
+                        cacheTime:20000,//缓存多久
+                        before:function(m){
+                            
+                        },
+                        after:function(m){
+                            
+                        }
+                    },
+                    {
+                        name:'Home_List1',
+                        options:{
+                            uri:'test'
+                        },
+                        before:function(m){
+                            
+                        },
+                        after:function(m){
+                            
+                        }
+                    }
+                ]);
+                return MM;
+            },{
+                requires:["mxext/mmanager","app/base/model"]
+            });
+
+            //使用
+
+            KISSY.use('app/base/mmanager',function(S,MM){
+                MM.fetchAll([
+                    {name:'Home_List',cacheKey:'aaa',urlParams:{e:'f'}},
+                    {name:'Home_List1',urlParams:{a:'b'}}
+                ],function(m1,m2){
+    
+                },function(msg){
+    
+                });
+            });</pre>
                                                         
                                                 </dd>
                                                 
@@ -954,56 +1532,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name="endTransaction"> </a>
+                                            <a name="saveAll"> </a>
                                             <div class="title" >
                                                 
-                                                <b class="name">endTransaction</b>
-                                                <span class="param">()</span>
+                                                <b class="name">saveAll</b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
                                             </div>
 
                                             <div class="desc">
-                                                结束事务
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name=".extend"> </a>
-                                            <div class="title" >
-                                                <span>Model.</span>
-                                                <b class="name">extend</b>
-                                                <span class="param">(props, ctor)</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                            </div>
-
-                                            <div class="desc">
-                                                继承
+                                                保存models，所有请求完成回调done
                                                 
                                                 
                                             </div>
@@ -1017,74 +1557,20 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">props</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">方法对象</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home'urlParams:{a:'12'},postParams:{b:2}}</span>
                                                         </li>
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">ctor</b>
+                                                            <b class="name">done</b>
                                                             
                                                             
                                                             <span class="type">{Function}</span> 
-                                                            <span class="desc">继承类的构造方法</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="get"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">get</b>
-                                                <span class="param">(type)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取属性
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">type</b>
-                                                            
-                                                            
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">type</span>
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -1103,7 +1589,7 @@ dl.data .dd{
                                                     <ul class="list">
                                                     
                                                         <li class="li">
-                                                            <span class="type">{Object}</span> 
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
                                                             <span></span>
                                                         </li>
                                                     
@@ -1121,400 +1607,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name="getParams"> </a>
+                                            <a name="saveOne"> </a>
                                             <div class="title" >
                                                 
-                                                <b class="name">getParams</b>
-                                                <span class="param">(type)</span>
+                                                <b class="name">saveOne</b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
                                                 
                                             </div>
 
                                             <div class="desc">
-                                                获取参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">type</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数分组的key[Model.GET,Model.POST]，默认为Model.GET</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{String}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="getParamsObject"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">getParamsObject</b>
-                                                <span class="param">(type)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取参数对象
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">type</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数分组的key[Model.GET,Model.POST]，默认为Model.GET</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{Object}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="getPostParams"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">getPostParams</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取通过setPostParams放入的参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{String}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="getPostParamsObject"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">getPostParamsObject</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取Post参数对象
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{Object}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="getUrlParams"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">getUrlParams</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取通过setUrlParams放入的参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{String}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="getUrlParamsObject"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">getUrlParamsObject</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取参数对象
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{Object}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="isAborted"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">isAborted</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                获取当前model是否已经取消了请求
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{Boolean}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="load"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">load</b>
-                                                <span class="param">(ops)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                加载model数据
+                                                保存models，其中任意一个成功均立即回调，回调会被调用多次
                                                 
                                                 
                                             </div>
@@ -1528,432 +1632,11 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">ops</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">请求选项</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="parse"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">parse</b>
-                                                <span class="param">(resp)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                处理Model.sync成功后返回的数据
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">resp</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">返回的数据</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
-                                                        <li class="li">
-                                                            <span class="type">{Object}</span> 
-                                                            <span></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="request"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">request</b>
-                                                <span class="param">(ops)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                向服务器请求，加载或保存数据
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">ops</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">请求选项</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">ops.success</b>
-                                                            
-                                                            
-                                                            <span class="type">{Function}</span> 
-                                                            <span class="desc">成功后的回调</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">ops.error</b>
-                                                            
-                                                            
-                                                            <span class="type">{Function}</span> 
-                                                            <span class="desc">失败后的回调</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="reset"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">reset</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                重置缓存的参数对象，对于同一个model反复使用前，最好能reset一下，防止把上次请求的参数也带上
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="rollbackTransaction"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">rollbackTransaction</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                回滚对model数据做的更改
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="save"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">save</b>
-                                                <span class="param">(ops)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                保存model数据
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">ops</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">请求选项</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="set"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">set</b>
-                                                <span class="param">(key, val, saveKeyList)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置属性
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">key</b>
-                                                            
-                                                            
-                                                            <span class="type">{String|Object}</span> 
-                                                            <span class="desc">属性对象或属性key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">val</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">属性值</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">saveKeyList</b>
-                                                            
-                                                            
-                                                            
-                                                            <span class="desc"></span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="setParams"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">setParams</b>
-                                                <span class="param">(obj1, obj2, type, ignoreIfExist, callback)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">obj1</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">参数对象或者参数key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">obj2</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数内容</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">type</b>
-                                                            
-                                                            
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数分组的key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">ignoreIfExist</b>
-                                                            
-                                                            
-                                                            <span class="type">{Boolean}</span> 
-                                                            <span class="desc">如果存在同名的参数则不覆盖，忽略掉这次传递的参数</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home',urlParams:{a:'12'},postParams:{b:2}}</span>
                                                         </li>
                                                     
                                                         <li class="li">
@@ -1962,322 +1645,25 @@ dl.data .dd{
                                                             
                                                             
                                                             <span class="type">{Function}</span> 
-                                                            <span class="desc">对每一项参数设置时的回调</span>
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="setPostParams"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">setPostParams</b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置post参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">obj1</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">参数对象或者参数key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">obj2</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数内容</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="setPostParamsIf"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">setPostParamsIf</b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置post参数，只有未设置过的参数才进行设置
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">obj1</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">参数对象或者参数key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">obj2</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数内容</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="setUrlParams"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">setUrlParams</b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置url参数
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">obj1</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">参数对象或者参数key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">obj2</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数内容</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="setUrlParamsIf"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">setUrlParamsIf</b>
-                                                <span class="param">(obj1, obj2)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                设置url参数，只有未设置过的参数才进行设置
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">obj1</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object|String}</span> 
-                                                            <span class="desc">参数对象或者参数key</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            [ 
-                                                            <b class="name">obj2</b>
-                                                            
-                                                             ]
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">参数内容</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name="sync"> </a>
-                                            <div class="title" >
-                                                
-                                                <b class="name">sync</b>
-                                                <span class="param">(model, ops)</span>
-                                                
-                                                
-                                                
-                                            </div>
-
-                                            <div class="desc">
-                                                Model调用save或load方法后，与服务器同步的方法，供应用开发人员覆盖
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">model</b>
+                                                            <b class="name">callback@model</b>
                                                             
                                                             
                                                             <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
-                                                            <span class="desc">model对象</span>
+                                                            <span class="desc">回调时传入的model对象</span>
                                                         </li>
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">ops</b>
+                                                            <b class="name">callback@error</b>
                                                             
                                                             
                                                             <span class="type">{Object}</span> 
-                                                            <span class="desc">包含success error的参数信息对象</span>
+                                                            <span class="desc">错误对象</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -2296,8 +1682,8 @@ dl.data .dd{
                                                     <ul class="list">
                                                     
                                                         <li class="li">
-                                                            <span class="type">{XHR}</span> 
-                                                            <span>最好返回异步请求的对象</span>
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
                                                         </li>
                                                     
                                                     </ul>
@@ -2314,18 +1700,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name="url"> </a>
+                                            <a name="saveOrder"> </a>
                                             <div class="title" >
                                                 
-                                                <b class="name">url</b>
-                                                <span class="param">(url)</span>
+                                                <b class="name">saveOrder</b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
                                                 
                                             </div>
 
                                             <div class="desc">
-                                                获取model对象请求时的后台地址
+                                                保存models，按顺序回回调done
                                                 
                                                 
                                             </div>
@@ -2339,11 +1725,20 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">url</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home'urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">done</b>
                                                             
-                                                            <span class="desc"></span>
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -2362,7 +1757,7 @@ dl.data .dd{
                                                     <ul class="list">
                                                     
                                                         <li class="li">
-                                                            <span class="type">{String}</span> 
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
                                                             <span></span>
                                                         </li>
                                                     

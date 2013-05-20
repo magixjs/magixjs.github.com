@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="generator" content="JsDoc Toolkit" />
         
-        <title>VOM</title>
+        <title>MRequest</title>
         <style>
             /*************************************************************************************
  * Reset
@@ -263,11 +263,11 @@ dl.data .dd{
                             <div class="box constructor-box">
                                 <div class="box-hd">
                                     
-                                    <h3><b class="name"><a href="../symbols/VOM.html#constructor">VOM</a></b>
+                                    <h3><b class="name"><a href="../symbols/MRequest.html#constructor">MRequest</a></b>
                                         
                                         
                                         
-                                        <span class="desc">VOM对象</span>
+                                        <span class="desc">model请求类</span>
                                     </h3>
                                     
                                 </div>
@@ -282,7 +282,7 @@ dl.data .dd{
 
                                     
                                         <p>源码：
-                                            <a href="../symbols/src/D__wamp_www_br_luna_subway_20130314_gaiban_2_subway-webapp2_src_main_webapp_src_libs_magix_docsrc__magix_kissy_magix_vom.js.html">vom.js</a></p>
+                                            <a href="../symbols/src/D__wamp_www_br_luna_subway_20130314_gaiban_2_subway-webapp2_src_main_webapp_src_libs_magix_docsrc__mxext_kissy_mxext_mmanager.js.html">mmanager.js</a></p>
 
                                     
 
@@ -308,103 +308,93 @@ dl.data .dd{
                                         <ul class="list summary-list">
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.add">add</a></b>
-                                                <span class="param">(vf)</span>
                                                 
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">注册vframe对象</span>                                                
-                                            </li>
-                                            
-                                            <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.all">all</a></b>
+                                                <b class="name"><a href="../symbols/MRequest.html#abort">abort</a></b>
                                                 <span class="param">()</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">获取所有的vframe对象</span>                                                
+                                                
+                                                <span class="desc">中止所有model的请求注意：调用该方法后会中止请求，并回调error方法</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.childCreated">childCreated</a></b>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#destroy">destroy</a></b>
                                                 <span class="param">()</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">通知其中的一个view创建完成</span>                                                
+                                                
+                                                <span class="desc">销毁当前请求，与abort的区别是：abort后还可以继续发起新请求，而destroy后则不可以，而且不再回调相应的error方法</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.get">get</a></b>
-                                                <span class="param">(id)</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#fetchAll">fetchAll</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">根据vframe的id获取vframe对象</span>                                                
+                                                
+                                                <span class="desc">获取models，所有请求完成回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.getLocation">getLocation</a></b>
-                                                <span class="param">()</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#fetchOne">fetchOne</a></b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">获取window.location.href解析后的对象</span>                                                
+                                                
+                                                <span class="desc">获取models，其中任意一个成功均立即回调，回调会被调用多次</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.locationChanged">locationChanged</a></b>
-                                                <span class="param">(e)</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#fetchOrder">fetchOrder</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">向vframe通知地址栏发生变化</span>                                                
+                                                
+                                                <span class="desc">获取models，按顺序执行回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.locationUpdated">locationUpdated</a></b>
-                                                <span class="param">(loc)</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#next">next</a></b>
+                                                <span class="param">(fn, fn@request, fn@preArgs, fn@preError)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">更新view的location对象</span>                                                
+                                                
+                                                <span class="desc">前一个fetchX或saveX任务做完后的下一个任务</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.remountRoot">remountRoot</a></b>
-                                                <span class="param">(e)</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#saveAll">saveAll</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">重新渲染根vframe</span>                                                
+                                                
+                                                <span class="desc">保存models，所有请求完成回调done</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.remove">remove</a></b>
-                                                <span class="param">(id)</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#saveOne">saveOne</a></b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">删除已注册的vframe对象</span>                                                
+                                                
+                                                <span class="desc">保存models，其中任意一个成功均立即回调，回调会被调用多次</span>                                                
                                             </li>
                                             
                                             <li class="li">                                                
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.root">root</a></b>
-                                                <span class="param">()</span>
+                                                
+                                                <b class="name"><a href="../symbols/MRequest.html#saveOrder">saveOrder</a></b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">获取根vframe对象</span>                                                
+                                                
+                                                <span class="desc">保存models，按顺序执行回调done</span>                                                
                                             </li>
                                             
                                         </ul>
@@ -416,51 +406,6 @@ dl.data .dd{
                             <!-- methods END -->
                             
                             <!-- events START -->
-                            
-                                
-                                
-                                <div class="box events-box">
-                                    <div class="box-hd">
-                                        <h3>Events</h3>
-                                    </div>
-                                    <div class="box-bd">
-                                        <ul class="list summary-list">
-                                            
-                                            <li class="li">
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.event:add">add</a></b>
-                                                <span class="param">(e)</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">注册vframe对象时触发</span>
-                                            </li>
-                                            
-                                            <li class="li">
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.event:progress">progress</a></b>
-                                                <span class="param">(e)</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">view加载完成进度</span>
-                                            </li>
-                                            
-                                            <li class="li">
-                                                VOM.
-                                                <b class="name"><a href="../symbols/VOM.html#.event:remove">remove</a></b>
-                                                <span class="param">(e)</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                                <span class="desc">删除vframe对象时触发</span>
-                                            </li>
-                                            
-                                        </ul>
-                                        
-                                    </div>
-                                </div>
-                                
                             
                             <!-- events END -->
 
@@ -475,7 +420,7 @@ dl.data .dd{
                                     <ul class="list detail-list">
                                         <li class="li">
                                             <div class="title">
-                                                <b class="name">VOM</b>
+                                                <b class="name">MRequest</b>
                                                 
                                             </div>
                                             
@@ -484,6 +429,22 @@ dl.data .dd{
                                             <dl>                                                
                                                 
                                                 
+                                                
+                                                <dt>参数：</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                        
+                                                        <li class="li">
+                                                            &nbsp;
+                                                                <b>host</b>
+                                                            
+                                                            
+                                                            <span class="type"><span class="light fixedFont">{<a href="../symbols/MManager.html">MManager</a>}</span> </span>
+                                                            <span class="desc"></span>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </dd>
                                                 
                                                 
                                                 
@@ -517,40 +478,24 @@ dl.data .dd{
                                     <ul class="list detail-list">
                                         
                                         <li class="li">
-                                            <a name=".add"> </a>
+                                            <a name="abort"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">add</b>
-                                                <span class="param">(vf)</span>
+                                                
+                                                <b class="name">abort</b>
+                                                <span class="param">()</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                注册vframe对象
+                                                中止所有model的请求注意：调用该方法后会中止请求，并回调error方法
                                                 
                                                 
                                             </div>
                                             
                                             <dl>                                            
                                                 
-                                                
-                                                <dt>Parameters</dt>
-                                                <dd>
-                                                    <ul class="list param-list">
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">vf</b>
-                                                            
-                                                            
-                                                            <span class="type">{<a href="../symbols/Vframe.html">Vframe</a>}</span> 
-                                                            <span class="desc">Vframe对象</span>
-                                                        </li>
-                                                    
-                                                    </ul>
-                                                </dd>
                                                 
                                                 
                                                 
@@ -571,18 +516,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".all"> </a>
+                                            <a name="destroy"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">all</b>
+                                                
+                                                <b class="name">destroy</b>
                                                 <span class="param">()</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                获取所有的vframe对象
+                                                销毁当前请求，与abort的区别是：abort后还可以继续发起新请求，而destroy后则不可以，而且不再回调相应的error方法
                                                 
                                                 
                                             </div>
@@ -598,12 +543,75 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
+                                            <a name="fetchAll"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">fetchAll</b>
+                                                <span class="param">(models, done)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                获取models，所有请求完成回调done
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">done</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
                                                 <dt>Returns</dt>
                                                 <dd>
                                                     <ul class="list">
                                                     
                                                         <li class="li">
-                                                            <span class="type">{Object}</span> 
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
                                                             <span></span>
                                                         </li>
                                                     
@@ -621,56 +629,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".childCreated"> </a>
+                                            <a name="fetchOne"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">childCreated</b>
-                                                <span class="param">()</span>
+                                                
+                                                <b class="name">fetchOne</b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                通知其中的一个view创建完成
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name=".get"> </a>
-                                            <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">get</b>
-                                                <span class="param">(id)</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                            </div>
-
-                                            <div class="desc">
-                                                根据vframe的id获取vframe对象
+                                                获取models，其中任意一个成功均立即回调，回调会被调用多次
                                                 
                                                 
                                             </div>
@@ -684,80 +654,57 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">id</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">vframe的id</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
                                                         </li>
                                                     
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
-                                                    
                                                         <li class="li">
-                                                            <span class="type">{<a href="../symbols/Vframe.html">Vframe</a>}</span> 
-                                                            <span>vframe对象</span>
+                                                            &nbsp;
+                                                            <b class="name">callback</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
                                                     
-                                                    </ul>
-                                                </dd>
-                                                
-                                                
-                                                
-                                                
-                                                                                                
-                                                
-                                                
-                                                
-                                            </dl>                                            
-                                        </li>
-                                        
-                                        <li class="li">
-                                            <a name=".getLocation"> </a>
-                                            <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">getLocation</b>
-                                                <span class="param">()</span>
-                                                
-                                                
-                                                <span class="attr">&lt;static&gt;</span>
-                                            </div>
-
-                                            <div class="desc">
-                                                获取window.location.href解析后的对象
-                                                
-                                                
-                                            </div>
-                                            
-                                            <dl>                                            
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                <dt>Returns</dt>
-                                                <dd>
-                                                    <ul class="list">
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@model</b>
+                                                            
+                                                            
+                                                            <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
+                                                            <span class="desc">回调时传入的model对象</span>
+                                                        </li>
                                                     
                                                         <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@error</b>
+                                                            
+                                                            
                                                             <span class="type">{Object}</span> 
+                                                            <span class="desc">错误对象</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
                                                             <span></span>
                                                         </li>
                                                     
@@ -775,18 +722,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".locationChanged"> </a>
+                                            <a name="fetchOrder"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">locationChanged</b>
-                                                <span class="param">(e)</span>
+                                                
+                                                <b class="name">fetchOrder</b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                向vframe通知地址栏发生变化
+                                                获取models，按顺序执行回调done
                                                 
                                                 
                                             </div>
@@ -800,29 +747,20 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">e</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">事件对象</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">获取models时的描述信息，如:{name:'Home',cacheKey:'key',urlParams:{a:'12'},postParams:{b:2}}</span>
                                                         </li>
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">e.location</b>
+                                                            <b class="name">done</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">window.location.href解析出来的对象</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">e.changed</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">包含有哪些变化的对象</span>
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -836,6 +774,18 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
                                                 
                                                 
                                                 
@@ -847,18 +797,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".locationUpdated"> </a>
+                                            <a name="next"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">locationUpdated</b>
-                                                <span class="param">(loc)</span>
+                                                
+                                                <b class="name">next</b>
+                                                <span class="param">(fn, fn@request, fn@preArgs, fn@preError)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                更新view的location对象
+                                                前一个fetchX或saveX任务做完后的下一个任务
                                                 
                                                 
                                             </div>
@@ -872,11 +822,38 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">loc</b>
+                                                            <b class="name">fn</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">回调</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">fn@request</b>
+                                                            
+                                                            
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span class="desc">MRequest对象，用于发起下一个请求</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">fn@preArgs</b>
                                                             
                                                             
                                                             <span class="type">{Object}</span> 
-                                                            <span class="desc">location</span>
+                                                            <span class="desc">前一个任务成功或失败回调的返回值</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">fn@preError</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">前一个任务执行后是否有错误</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -890,6 +867,18 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
                                                 
                                                 
                                                 
@@ -901,18 +890,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".remountRoot"> </a>
+                                            <a name="saveAll"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">remountRoot</b>
-                                                <span class="param">(e)</span>
+                                                
+                                                <b class="name">saveAll</b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                重新渲染根vframe
+                                                保存models，所有请求完成回调done
                                                 
                                                 
                                             </div>
@@ -926,29 +915,20 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">e</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">Router.locationChanged事件对象</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home'urlParams:{a:'12'},postParams:{b:2}}</span>
                                                         </li>
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">e.location</b>
+                                                            <b class="name">done</b>
                                                             
                                                             
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">window.location.href解析出来的对象</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
-                                                            <b class="name">e.changed</b>
-                                                            
-                                                            
-                                                            <span class="type">{Object}</span> 
-                                                            <span class="desc">包含有哪些变化的对象</span>
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -962,6 +942,18 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
                                                 
                                                 
                                                 
@@ -973,18 +965,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".remove"> </a>
+                                            <a name="saveOne"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">remove</b>
-                                                <span class="param">(id)</span>
+                                                
+                                                <b class="name">saveOne</b>
+                                                <span class="param">(models, callback, callback@model, callback@error)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                删除已注册的vframe对象
+                                                保存models，其中任意一个成功均立即回调，回调会被调用多次
                                                 
                                                 
                                             </div>
@@ -998,11 +990,38 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">id</b>
+                                                            <b class="name">models</b>
                                                             
                                                             
-                                                            <span class="type">{String}</span> 
-                                                            <span class="desc">vframe对象的id</span>
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home',urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@model</b>
+                                                            
+                                                            
+                                                            <span class="type">{<a href="../symbols/Model.html">Model</a>}</span> 
+                                                            <span class="desc">回调时传入的model对象</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback@error</b>
+                                                            
+                                                            
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">错误对象</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -1016,6 +1035,18 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
                                                 
                                                 
                                                 
@@ -1027,18 +1058,18 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
-                                            <a name=".root"> </a>
+                                            <a name="saveOrder"> </a>
                                             <div class="title" >
-                                                <span>VOM.</span>
-                                                <b class="name">root</b>
-                                                <span class="param">()</span>
+                                                
+                                                <b class="name">saveOrder</b>
+                                                <span class="param">(models, done)</span>
                                                 
                                                 
-                                                <span class="attr">&lt;static&gt;</span>
+                                                
                                             </div>
 
                                             <div class="desc">
-                                                获取根vframe对象
+                                                保存models，按顺序执行回调done
                                                 
                                                 
                                             </div>
@@ -1046,6 +1077,30 @@ dl.data .dd{
                                             <dl>                                            
                                                 
                                                 
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">models</b>
+                                                            
+                                                            
+                                                            <span class="type">{String|Array}</span> 
+                                                            <span class="desc">保存models时的描述信息，如:{name:'Home'urlParams:{a:'12'},postParams:{b:2}}</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">done</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">完成时的回调</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
                                                 
                                                 
                                                 
@@ -1053,6 +1108,19 @@ dl.data .dd{
                                                 
                                                 
                                                 
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{<a href="../symbols/MRequest.html">MRequest</a>}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
                                                 
                                                 
                                                 
@@ -1071,209 +1139,6 @@ dl.data .dd{
                             <!-- methods detail END -->
 
                             <!-- events detail START -->
-                            
-                            <div class="box">
-                                <div class="box-hd">
-                                    <h3>Events Detail</h3>
-                                </div>
-                                <div class="box-bd">
-                                <ul class="detail-list">
-                                    
-                                    <li>
-                                        <a name=".event:add"> </a>
-                                        <div class="title">
-                                            <a  name="event:add"></a>
-                                            
-                                            <span>VOM.</span>
-                                            <b class="name">add</b>
-                                            <span class="param">(e)</span>
-                                            
-                                            
-                                            <span class="attr">&lt;static&gt;</span>
-                                        </div>
-                                        
-                                        <div class="desc">
-                                            注册vframe对象时触发
-                                            
-                                            
-                                        </div>
-                                        
-                                        <dl>
-                                            
-                                            <dt>参数：</dt>
-                                            <dd>
-                                                <ul class="list param-list">
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e</b>
-                                                        
-                                                        
-                                                        <span class="type">{Object}</span> 
-                                                        <span class="desc"></span>
-                                                    </li>
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e.vframe</b>
-                                                        
-                                                        
-                                                        <span class="type">{<a href="../symbols/Vframe.html">Vframe</a>}</span> 
-                                                        <span class="desc"></span>
-                                                    </li>
-                                                
-                                                </ul>
-                                            </dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            <dt>
-
-                                            
-                                            
-                                        </dl>
-                                    </li>
-                                    
-                                    <li>
-                                        <a name=".event:progress"> </a>
-                                        <div class="title">
-                                            <a  name="event:progress"></a>
-                                            
-                                            <span>VOM.</span>
-                                            <b class="name">progress</b>
-                                            <span class="param">(e)</span>
-                                            
-                                            
-                                            <span class="attr">&lt;static&gt;</span>
-                                        </div>
-                                        
-                                        <div class="desc">
-                                            view加载完成进度
-                                            
-                                            
-                                        </div>
-                                        
-                                        <dl>
-                                            
-                                            <dt>参数：</dt>
-                                            <dd>
-                                                <ul class="list param-list">
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e</b>
-                                                        
-                                                        
-                                                        <span class="type">{Object}</span> 
-                                                        <span class="desc"></span>
-                                                    </li>
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e.precent</b>
-                                                        
-                                                        
-                                                        <span class="type">{Object}</span> 
-                                                        <span class="desc">百分比</span>
-                                                    </li>
-                                                
-                                                </ul>
-                                            </dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            <dt>
-
-                                            
-                                            
-                                        </dl>
-                                    </li>
-                                    
-                                    <li>
-                                        <a name=".event:remove"> </a>
-                                        <div class="title">
-                                            <a  name="event:remove"></a>
-                                            
-                                            <span>VOM.</span>
-                                            <b class="name">remove</b>
-                                            <span class="param">(e)</span>
-                                            
-                                            
-                                            <span class="attr">&lt;static&gt;</span>
-                                        </div>
-                                        
-                                        <div class="desc">
-                                            删除vframe对象时触发
-                                            
-                                            
-                                        </div>
-                                        
-                                        <dl>
-                                            
-                                            <dt>参数：</dt>
-                                            <dd>
-                                                <ul class="list param-list">
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e</b>
-                                                        
-                                                        
-                                                        <span class="type">{Object}</span> 
-                                                        <span class="desc"></span>
-                                                    </li>
-                                                
-                                                    <li class="li">
-                                                        &nbsp;
-                                                        <b class="name">e.vframe</b>
-                                                        
-                                                        
-                                                        <span class="type">{<a href="../symbols/Vframe.html">Vframe</a>}</span> 
-                                                        <span class="desc"></span>
-                                                    </li>
-                                                
-                                                </ul>
-                                            </dd>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            <dt>
-
-                                            
-                                            
-                                        </dl>
-                                    </li>
-                                    
-                                </ul>
-                                </div>
-                            </div>
                             
                             <!-- events detail START -->
 
