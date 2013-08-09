@@ -408,6 +408,16 @@ dl.data .dd{
                                             
                                             <li class="li">                                                
                                                 
+                                                <b class="name"><a href="../symbols/Vframe.html#invokeView">invokeView</a></b>
+                                                <span class="param">(methodName, args1,args2)</span>
+                                                
+                                                
+                                                
+                                                <span class="desc">调用view中的方法</span>                                                
+                                            </li>
+                                            
+                                            <li class="li">                                                
+                                                
                                                 <b class="name"><a href="../symbols/Vframe.html#mountVframe">mountVframe</a></b>
                                                 <span class="param">(id, viewPath, viewInitParams, autoMount)</span>
                                                 
@@ -419,7 +429,7 @@ dl.data .dd{
                                             <li class="li">                                                
                                                 
                                                 <b class="name"><a href="../symbols/Vframe.html#mountView">mountView</a></b>
-                                                <span class="param">(viewPath, viewInitParams)</span>
+                                                <span class="param">(viewPath, viewInitParams, callback)</span>
                                                 
                                                 
                                                 
@@ -542,7 +552,7 @@ dl.data .dd{
                                                 
                                                 
                                                 
-                                                <span class="desc">view初始化完成后触发</span>
+                                                <span class="desc">view初始化完成后触发，由于vframe可以渲染不同的view，也就是可以通过mountView来渲染其它view，所以viewInited可能触发多次</span>
                                             </li>
                                             
                                             <li class="li">
@@ -552,7 +562,7 @@ dl.data .dd{
                                                 
                                                 
                                                 
-                                                <span class="desc">view卸载时触发</span>
+                                                <span class="desc">view卸载时触发，由于vframe可以渲染不同的view，因此该事件可能被触发多次</span>
                                             </li>
                                             
                                         </ul>
@@ -808,6 +818,81 @@ dl.data .dd{
                                         </li>
                                         
                                         <li class="li">
+                                            <a name="invokeView"> </a>
+                                            <div class="title" >
+                                                
+                                                <b class="name">invokeView</b>
+                                                <span class="param">(methodName, args1,args2)</span>
+                                                
+                                                
+                                                
+                                            </div>
+
+                                            <div class="desc">
+                                                调用view中的方法
+                                                
+                                                
+                                            </div>
+                                            
+                                            <dl>                                            
+                                                
+                                                
+                                                <dt>Parameters</dt>
+                                                <dd>
+                                                    <ul class="list param-list">
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">methodName</b>
+                                                            
+                                                            
+                                                            <span class="type">{String}</span> 
+                                                            <span class="desc">方法名</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            [ 
+                                                            <b class="name">args1,args2</b>
+                                                            
+                                                             ]
+                                                            <span class="type">{Object}</span> 
+                                                            <span class="desc">向方法传递的参数</span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                <dt>Returns</dt>
+                                                <dd>
+                                                    <ul class="list">
+                                                    
+                                                        <li class="li">
+                                                            <span class="type">{Object}</span> 
+                                                            <span></span>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </dd>
+                                                
+                                                
+                                                
+                                                
+                                                                                                
+                                                
+                                                
+                                                
+                                            </dl>                                            
+                                        </li>
+                                        
+                                        <li class="li">
                                             <a name="mountVframe"> </a>
                                             <div class="title" >
                                                 
@@ -912,7 +997,7 @@ dl.data .dd{
                                             <div class="title" >
                                                 
                                                 <b class="name">mountView</b>
-                                                <span class="param">(viewPath, viewInitParams)</span>
+                                                <span class="param">(viewPath, viewInitParams, callback)</span>
                                                 
                                                 
                                                 
@@ -947,6 +1032,15 @@ dl.data .dd{
                                                             
                                                             <span class="type">{Object|Null}</span> 
                                                             <span class="desc">view在调用init时传递的参数</span>
+                                                        </li>
+                                                    
+                                                        <li class="li">
+                                                            &nbsp;
+                                                            <b class="name">callback</b>
+                                                            
+                                                            
+                                                            <span class="type">{Function}</span> 
+                                                            <span class="desc">view加载完成并触发inited事件时的回调</span>
                                                         </li>
                                                     
                                                     </ul>
@@ -1512,7 +1606,7 @@ dl.data .dd{
                                         </div>
                                         
                                         <div class="desc">
-                                            view初始化完成后触发
+                                            view初始化完成后触发，由于vframe可以渲染不同的view，也就是可以通过mountView来渲染其它view，所以viewInited可能触发多次
                                             
                                             
                                         </div>
@@ -1567,7 +1661,7 @@ dl.data .dd{
                                         </div>
                                         
                                         <div class="desc">
-                                            view卸载时触发
+                                            view卸载时触发，由于vframe可以渲染不同的view，因此该事件可能被触发多次
                                             
                                             
                                         </div>
