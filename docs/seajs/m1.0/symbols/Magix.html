@@ -1883,15 +1883,6 @@ dl.data .dd{
                                                     
                                                         <li class="li">
                                                             &nbsp;
-                                                            <b class="name">cfg.debug</b>
-                                                            
-                                                            
-                                                            <span class="type">{Boolean}</span> 
-                                                            <span class="desc">指定当前app是否是发布版本，当使用发布版本时，view的html和js应该打包成一个 view-min.js文件，否则Magix在加载view时会分开加载view.js和view.html(view.hasTemplate为true的情况下)</span>
-                                                        </li>
-                                                    
-                                                        <li class="li">
-                                                            &nbsp;
                                                             <b class="name">cfg.nativeHistory</b>
                                                             
                                                             
@@ -1991,7 +1982,7 @@ dl.data .dd{
                                                 <dt>Example</dt>
                                                 <dd>
                                                         
-                                                            <pre class="brush: js; ">Magix.start({     useHistoryState:true,     appRoot:'http://etao.com/srp/app/',     debug:true,     iniFile:'',//是否有ini配置文件     defaultView:'app/views/layouts/default',//默认加载的view     defaultPathname:'/home',     routes:{         "/home":"app/views/layouts/default"     }});</pre>
+                                                            <pre class="brush: js; ">Magix.start({     useHistoryState:true,     appRoot:'http://etao.com/srp/app/',     iniFile:'',//是否有ini配置文件     defaultView:'app/views/layouts/default',//默认加载的view     defaultPathname:'/home',     routes:{         "/home":"app/views/layouts/default"     }});</pre>
                                                         
                                                 </dd>
                                                 
