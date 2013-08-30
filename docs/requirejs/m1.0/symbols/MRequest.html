@@ -840,6 +840,24 @@ dl.data .dd{
                                                                                                 
                                                 
                                                 
+                                                <dt>Example</dt>
+                                                <dd>
+                                                        
+                                                            <pre class="brush: js; ">
+        var r=MM.fetchAll([
+            {name:'M1'},
+            {name:'M2'}
+        ],function(err,m1,m2){
+
+            return 'fetchAllReturned';
+        });
+
+        r.next(function(err,fetchAllReturned){
+            alert(fetchAllReturned);
+        });</pre>
+                                                        
+                                                </dd>
+                                                
                                                 
                                             </dl>                                            
                                         </li>
